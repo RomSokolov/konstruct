@@ -1,0 +1,14 @@
+@import './mixins/_mixins';
+
+body{
+    font-family: $primary-font-family;
+
+}
+
+h2 {
+    @include text($primary-font-family,18px,25px,$bold-text,$main-text-color)
+}
+
+
+
+

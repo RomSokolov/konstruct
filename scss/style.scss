@@ -1,0 +1,191 @@
+@import "./base/_variables";
+@import "./base/colors";
+@import "./base//typography";
+@import "./mixins/mixins";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./components/forms";
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.page__header {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   justify-content: space-between;
+   align-items: center;
+   padding-top:42px;
+   padding-bottom:71px;
+   background: url(../img/header_background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+      .logo {
+        width: 101px;
+      }
+
+      .center__text {
+        text-align: center
+      }
+     
+      .title {
+        @include text($secondary-font-family, 60px, 72px, 400, #ffffff);
+        
+      }
+
+      p {
+        @include text($primary-font-family, 16px, 22px, 700, #ffffff);
+        
+      }
+
+      a {
+        @include text($primary-font-family, 11px, 15px, $bold-text, #ffffff);
+        letter-spacing: 3.7px;
+        
+      }
+    }
+  
+
+.navigation {
+  max-width: 940px;
+  @include dispaly(flex, row, space-between);
+  margin: 0 auto;
+  padding: 25px 0;
+
+  .navigation__list {
+    @include dispaly(flex, row, space-between);
+
+    .navigation__item {
+      margin-right: 47px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        @include text(
+          $primary-font-family,
+          12px,
+          16px,
+          $bold-text,
+          $main-text-color
+        );
+      }
+    }
+  }
+}
+
+@media (max-width:940px) {
+  .navigation {
+    max-width: 90%;
+  }
+}
+
+.story.container {
+  text-align: center;
+
+  .story__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .story__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 405px;
+    
+    .main-story-text {
+      text-align: left;
+      margin-bottom: 30px;
+      white-space: break-spaces;
+      @include text(
+        $primary-font-family,
+        20px,
+        27px,
+        $bold-text,
+        $main-text-color
+      );
+      span {
+        color: #16ace8;
+      }
+    }
+
+    .secondary-story-text {
+      text-align: start;
+      white-space: break-spaces;
+      @include text(
+        $primary-font-family,
+        13px,
+        23px,
+        $regular-text,
+        $main-text-color
+      );
+    }
+  }
+  
+    .cards {
+
+    display: flex;
+    .card {
+      height: 225px;
+      width: 130px;
+      background: url(../img/we_plan.webp);
+    }
+    }
+
+}
