@@ -321,7 +321,6 @@ h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
 }
 .getin .getin__content {
   display: flex;
