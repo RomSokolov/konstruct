@@ -1,3 +1,54 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -10,6 +61,87 @@ h2 {
   color: #48555B;
 }
 
+.page__header {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 42px;
+  padding-bottom: 71px;
+  background: url(../img/header_background.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.header__container .logo {
+  width: 101px;
+}
+.header__container .center__text {
+  text-align: center;
+}
+.header__container .title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.header__container p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.header__container a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 3.7px;
+}
+
+.navigation {
+  max-width: 940px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+.navigation .navigation__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navigation .navigation__list .navigation__item {
+  margin-right: 47px;
+}
+.navigation .navigation__list .navigation__item:last-child {
+  margin-right: 0;
+}
+.navigation .navigation__list .navigation__item a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #48555B;
+}
+
+@media (max-width: 940px) {
+  .navigation {
+    max-width: 90%;
+  }
+}
 .capabilities {
   padding-top: 128px;
   padding-bottom: 115px;
@@ -99,178 +231,6 @@ h2 {
     margin-bottom: 15px;
   }
 }
-.getin {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  width: 100%;
-  background: url(../../img/footer_background.jpg);
-  background-size: 100wh 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
-}
-.getin__title {
-  font-family: "Open Sans", sans-serif;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #48555B;
-}
-.getin__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #00A4E5;
-  width: 150px;
-  height: 40px;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  line-height: 18px;
-  transition: all 0.3s ease;
-}
-.getin__button:hover {
-  background-color: #007fb2;
-}
-.getin__button:focus {
-  outline: none;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  max-width: 940px;
-  margin: 0 auto;
-}
-
-.page__header {
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.header__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 42px;
-  padding-bottom: 71px;
-  background: url(../img/header_background.jpg);
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.header__container .logo {
-  width: 101px;
-}
-.header__container .center__text {
-  text-align: center;
-}
-.header__container .title {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 60px;
-  line-height: 72px;
-  font-weight: 400;
-  color: #ffffff;
-}
-.header__container p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 700;
-  color: #ffffff;
-}
-.header__container a {
-  font-family: "Open Sans", sans-serif;
-  font-size: 11px;
-  line-height: 15px;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 3.7px;
-}
-
-.navigation {
-  max-width: 940px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 25px 0;
-}
-.navigation .navigation__list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.navigation .navigation__list .navigation__item {
-  margin-right: 47px;
-}
-.navigation .navigation__list .navigation__item:last-child {
-  margin-right: 0;
-}
-.navigation .navigation__list .navigation__item a {
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 700;
-  color: #48555B;
-}
-
-@media (max-width: 940px) {
-  .navigation {
-    max-width: 90%;
-  }
-}
 .story.container {
   text-align: center;
   padding-top: 48px;
@@ -350,4 +310,45 @@ a {
   line-height: 29px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.getin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  background: url(../../img/footer_background.jpg);
+  background-size: 100wh 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+.getin__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #48555B;
+}
+.getin__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00A4E5;
+  width: 150px;
+  height: 40px;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 18px;
+  transition: all 0.3s ease;
+}
+.getin__button:hover {
+  background-color: #007fb2;
+}
+.getin__button:focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
