@@ -1,20 +1,92 @@
-
 .getin {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 100%;
   background: url(../../img/footer_background.jpg);
-  background-size: 100wh 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
-  &__title {
-  @include text($primary-font-family, 30px, 36px, $bold-text, $main-text-color);
+  background-position: center center;
+  background-attachment: fixed;
+  .getin__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 20%;
+    .content__title {
+      padding-top: 10px;
+      margin-bottom: 35px;
+      @include text(
+        $primary-font-family,
+        30px,
+        36px,
+        $bold-text,
+        $main-text-color
+      );
+    }
+    .getin__button {
+      @include text($primary-font-family, 13px, 18px, $bold-text, #fff);
+      background-color: #00a4e5;
+      padding: 11px 26px;
+      height: 40px;
+      border: none;
+      &:hover {
+        background-color: darken(#00a4e5, 10%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }
-  &__button {
-    @include button();
+
+.signup {
+  background-color: #171819;
+  background-size: 100%;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 23px;
+
+  form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 51px;
+  }
+
+  label {
+    margin-right: 70px;
+    @include text($primary-font-family, 22px, 30px, $bold-text, #fff);
+  }
+
+  input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border: 1px solid grey;
+    &::placeholder {
+      margin-left: 5px;
+    }
+  }
+
+  button {
+    @include text($primary-font-family, 13px, 18px, $bold-text, #fff);
+    background-color: #00a4e5;
+    padding: 11px 49px;
+    height: 40px;
+    border: none;
+    &:hover {
+      background-color: darken(#00a4e5, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .site_disigner {
+    @include text($primary-font-family, 11px, 15px, $regular-text, #fff);
   }
 }

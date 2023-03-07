@@ -12,25 +12,4 @@
     justify-content: $justify-content;
   }
 
-  @mixin button() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  background-color: #00A4E5;
-  width: 150px;
-  height: 40px;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  line-height: 18px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: darken(#00A4E5, 10%);
-  }
-
-  &:focus {
-    outline: none;
-  }
-} 
+ 

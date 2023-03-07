@@ -123,18 +123,21 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
 }
-.navigation .navigation__list .navigation__item {
+.navigation .navigation__list li {
   margin-right: 47px;
 }
-.navigation .navigation__list .navigation__item:last-child {
+.navigation .navigation__list li:last-child {
   margin-right: 0;
 }
-.navigation .navigation__list .navigation__item a {
+.navigation .navigation__list .navigation__item {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
   color: #48555B;
+}
+.navigation .navigation__list .navigation__item:hover {
+  color: #00a4e5;
 }
 
 @media (max-width: 940px) {
@@ -172,18 +175,15 @@ h2 {
   color: #48555B;
 }
 .capabilities .title__container .capabilities__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #00A4E5;
-  width: 150px;
-  height: 40px;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  color: #fff;
+  background-color: #00a4e5;
+  padding: 11px 29px;
+  height: 40px;
+  border: none;
 }
 .capabilities .title__container .capabilities__button:hover {
   background-color: #007fb2;
@@ -196,7 +196,7 @@ h2 {
 }
 .capabilities .cards .card {
   width: 295px;
-  border: 1px solid #E6E6E6;
+  border: 1px solid #e6e6e6;
   padding: 32px 23px;
   margin-right: 28px;
 }
@@ -317,38 +317,101 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 100%;
   background: url(../../img/footer_background.jpg);
-  background-size: 100wh 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  text-align: center;
+  background-position: center center;
+  background-attachment: fixed;
 }
-.getin__title {
+.getin .getin__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 20%;
+}
+.getin .getin__content .content__title {
+  padding-top: 10px;
+  margin-bottom: 35px;
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #48555B;
 }
-.getin__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #00A4E5;
-  width: 150px;
-  height: 40px;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
+.getin .getin__content .getin__button {
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  color: #fff;
+  background-color: #00a4e5;
+  padding: 11px 26px;
+  height: 40px;
+  border: none;
 }
-.getin__button:hover {
+.getin .getin__content .getin__button:hover {
   background-color: #007fb2;
 }
-.getin__button:focus {
+.getin .getin__content .getin__button:focus {
   outline: none;
+}
+
+.signup {
+  background-color: #171819;
+  background-size: 100%;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 23px;
+}
+.signup form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 51px;
+}
+.signup label {
+  margin-right: 70px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.signup input {
+  width: 250px;
+  height: 40px;
+  border: none;
+  border: 1px solid grey;
+}
+.signup input::-moz-placeholder {
+  margin-left: 5px;
+}
+.signup input::placeholder {
+  margin-left: 5px;
+}
+.signup button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #00a4e5;
+  padding: 11px 49px;
+  height: 40px;
+  border: none;
+}
+.signup button:hover {
+  background-color: #007fb2;
+}
+.signup button:focus {
+  outline: none;
+}
+.signup .site_disigner {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

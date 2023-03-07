@@ -49,20 +49,23 @@
   .navigation__list {
     @include dispaly(flex, row, space-between);
 
-    .navigation__item {
+    li {
       margin-right: 47px;
       &:last-child {
         margin-right: 0;
       }
-      a {
-        @include text(
-          $primary-font-family,
-          12px,
-          16px,
-          $bold-text,
-          $main-text-color
-        );
+    }
+    .navigation__item {
+      &:hover {
+        color: #00a4e5;
       }
+      @include text(
+        $primary-font-family,
+        12px,
+        16px,
+        $bold-text,
+        $main-text-color
+      );
     }
   }
 }
