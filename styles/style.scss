@@ -1,10 +1,8 @@
-@import "./base/_variables";
-@import "./base/colors";
-@import "./base//typography";
-@import "./mixins/mixins";
-@import "./components/buttons";
-@import "./components/cards";
-@import "./components/forms";
+@import "./sass/_typography";
+@import "./sass/_variables";
+@import "./sass/capabilities";
+@import "./sass/footer";
+     
 
 html {
   box-sizing: border-box;
@@ -64,43 +62,39 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-   justify-content: space-between;
-   align-items: center;
-   padding-top:42px;
-   padding-bottom:71px;
-   background: url(../img/header_background.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 42px;
+  padding-bottom: 71px;
+  background: url(../img/header_background.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
-      .logo {
-        width: 101px;
-      }
+  .logo {
+    width: 101px;
+  }
 
-      .center__text {
-        text-align: center
-      }
-     
-      .title {
-        @include text($secondary-font-family, 60px, 72px, 400, #ffffff);
-        
-      }
+  .center__text {
+    text-align: center;
+  }
 
-      p {
-        @include text($primary-font-family, 16px, 22px, 700, #ffffff);
-        
-      }
+  .title {
+    @include text($secondary-font-family, 60px, 72px, 400, #ffffff);
+  }
 
-      a {
-        @include text($primary-font-family, 11px, 15px, $bold-text, #ffffff);
-        letter-spacing: 3.7px;
-        
-      }
-    }
-  
+  p {
+    @include text($primary-font-family, 16px, 22px, 700, #ffffff);
+  }
+
+  a {
+    @include text($primary-font-family, 11px, 15px, $bold-text, #ffffff);
+    letter-spacing: 3.7px;
+  }
+}
 
 .navigation {
   max-width: 940px;
@@ -129,7 +123,7 @@ a {
   }
 }
 
-@media (max-width:940px) {
+@media (max-width: 940px) {
   .navigation {
     max-width: 90%;
   }
@@ -137,7 +131,21 @@ a {
 
 .story.container {
   text-align: center;
-
+  padding-top: 48px;
+  .story__title {
+    position: relative;
+    margin-bottom: 92px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      width: 50px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #16ace8;
+    }
+  }
   .story__content {
     display: flex;
     justify-content: space-between;
@@ -148,7 +156,7 @@ a {
     display: flex;
     flex-direction: column;
     max-width: 405px;
-    
+
     .main-story-text {
       text-align: left;
       margin-bottom: 30px;
@@ -177,15 +185,31 @@ a {
       );
     }
   }
-  
-    .cards {
 
+  .stickers {
     display: flex;
-    .card {
+    .sticker {
       height: 225px;
       width: 130px;
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .we_plan {
       background: url(../img/we_plan.webp);
     }
+    .we_manage {
+      background: url(../img/we_manage.webp);
     }
-
+    .we_build {
+      background: url(../img/we_build.webp);
+    }
+    p {
+      margin-left: 14px;
+      margin-top: 15px;
+      text-align: start;
+      @include text($primary-font-family, 24px, 29px, $bold-text, #ffffff);
+    }
+  }
 }

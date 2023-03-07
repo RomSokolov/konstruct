@@ -1,0 +1,20 @@
+
+.getin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  background: url(../../img/footer_background.jpg);
+  background-size: 100wh 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  &__title {
+  @include text($primary-font-family, 30px, 36px, $bold-text, $main-text-color);
+}
+  &__button {
+    @include button();
+  }
+}

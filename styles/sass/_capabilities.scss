@@ -1,0 +1,70 @@
+.capabilities {
+  padding-top: 128px;
+  padding-bottom: 115px;
+ .title__container {
+    display: flex;
+    justify-content: space-between;
+  .capabilities__title {
+     position: relative;
+    margin-bottom: 92px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      width: 50px;
+      height: 2px;
+      left: 0%;
+      background: #16ace8;
+    }
+  }
+
+.capabilities__text {
+    max-width: 405px;
+    @include text ($primary-font-family,11px,19px,$regular-text,$main-text-color)
+}
+
+.capabilities__button{
+  @include button();
+    }
+ } 
+
+ .cards{
+    display: flex;
+
+    .card{
+        width: 295px ;
+        
+        border: 1px solid #E6E6E6;
+        padding: 32px 23px;
+        margin-right: 28px ;
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &__img {
+            margin-bottom: 25px;
+        }
+        
+        &__title {
+             margin-bottom: 13px;
+             @include text($primary-font-family,16px,24px,$bold-text,$main-text-color)
+        }
+
+        &__text {
+             @include text($primary-font-family,13px,23px,$regular-text,$main-text-color)
+        }
+    }
+ }
+
+}
+
+@media (max-width:950px) {
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        
+         .card {  
+        margin-bottom: 15px;
+    }  
+    }
+}
