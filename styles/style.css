@@ -61,10 +61,6 @@ h2 {
   color: #48555B;
 }
 
-.page__header {
-  border-bottom: 1px solid #e6e6e6;
-}
-
 .header__container {
   display: flex;
   flex-direction: column;
@@ -112,11 +108,26 @@ h2 {
 
 .navigation {
   max-width: 940px;
+  position: sticky;
+  top: 0;
+  left: 5px;
+  background: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
   padding: 25px 0;
+  z-index: 10;
+}
+.navigation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #E6E6E6;
 }
 .navigation .navigation__list {
   display: flex;
@@ -320,7 +331,7 @@ h2 {
   background: url(../img/footer_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
 }
 .getin .getin__content {
   display: flex;

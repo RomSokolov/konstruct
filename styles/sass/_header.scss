@@ -1,6 +1,4 @@
-.page__header {
-  border-bottom: 1px solid #e6e6e6;
-}
+
 
 .header__container {
   display: flex;
@@ -40,11 +38,30 @@
   }
 }
 
+
+
 .navigation {
   max-width: 940px;
+  position: sticky;
+  top: 0;
+  left:5px;
+  background: #ffffff;
   @include dispaly(flex, row, space-between);
   margin: 0 auto;
   padding: 25px 0;
+   z-index: 10;
+
+  &::after{
+    content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+      height: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #E6E6E6;
+     
+  }
 
   .navigation__list {
     @include dispaly(flex, row, space-between);
